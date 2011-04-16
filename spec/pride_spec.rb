@@ -6,7 +6,7 @@ describe 'passing' do
   it 'should print a star for passing tests'
   it 'should cycle colours for the passing tests'
   it 'should print a red F for failed tests'
-  it 'should print a black P for pending tests'
+  it 'should print a bold white P for pending tests'
   it 'should print a read F for error tests'
 
   describe 'the summary' do
