@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.files            = Dir.glob("lib/**/*")
   s.test_files       = Dir.glob("spec/**/*")
-  s.extra_rdoc_files = [ 'Rakefile', 'README.rdoc' ]
+  s.extra_rdoc_files = [ 'Rakefile', 'README.markdown' ]
 
   s.add_dependency 'rspec',  ['~> 2.5']
 end
