@@ -5,7 +5,7 @@ class Pride < RSpec::Core::Formatters::BaseTextFormatter
   # stolen from minitest/pride
   COLORS = (31..36).to_a
   COLORS_SIZE = COLORS.size
-  CHARS = ["*"]
+  CHARS = ['*']
   CHARS_SIZE = CHARS.size
 
   def initialize io
