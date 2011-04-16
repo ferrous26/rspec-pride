@@ -4,6 +4,8 @@ Take pride in your test output
 
 Mimics the functionality of minitest/pride for RSpec2
 
+[![Build Status](http://travis-ci.org/ferrous26/rspec-pride.png)](http://travis-ci.org/ferrous26/rspec-pride)
+
 ## Contributing to Rspec-pride
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
