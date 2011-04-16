@@ -9,6 +9,7 @@ class Pride < RSpec::Core::Formatters::BaseTextFormatter
   CHARS_SIZE = CHARS.size
 
   def initialize io
+    super
     @colors = COLORS
     @chars  = CHARS
     @index  = 0
@@ -17,17 +18,17 @@ class Pride < RSpec::Core::Formatters::BaseTextFormatter
   def example_passed proxy
     super
     @index += 1
-    output.puts "\e[#{@colors[@index % COLORS_SIZE]}m#{@chars[@index % CHARS_SIZE]}\e[0m"
+    output.print "\e[#{@colors[@index % COLORS_SIZE]}m#{@chars[@index % CHARS_SIZE]}\e[0m"
   end
 
   def example_failed proxy
     super
-    output.puts "\e[41m\e[37mF\e[0m"
+    output.print "\e[41m\e[37mF\e[0m"
   end
 
   def example_pending proxy
     super
-    output.puts "\e[41m\e[37m#P\e[0m"
+    output.print "\e[40m\e[37mP\e[0m"
   end
 
 end
