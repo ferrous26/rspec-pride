@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'rake'
 
 task :default => :test
@@ -29,7 +30,6 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 
-require 'rubygems'
 require 'rubygems/builder'
 require 'rubygems/installer'
 spec = Gem::Specification.load('rspec-pride.gemspec')
