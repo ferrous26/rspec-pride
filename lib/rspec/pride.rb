@@ -17,18 +17,31 @@ class Pride < RSpec::Core::Formatters::BaseTextFormatter
 
   def example_passed proxy
     super
-    @index += 1
-    output.print "\e[#{@colors[@index % COLORS_SIZE]}m#{@chars[@index % CHARS_SIZE]}\e[0m"
+    output.print rainbow( @chars[@index % CHARS_SIZE] )
   end
 
   def example_failed proxy
     super
-    output.print "\e[41m\e[37mF\e[0m"
+    output.print red( 'F' )
   end
 
   def example_pending proxy
     super
-    output.print "\e[40m\e[37mP\e[0m"
+    output.print bold_white( 'P' )
   end
 
+
+  private
+
+  def bold_white string; "\e[40m\e[37m#{string}"      + reset_color; end
+  def red string;        "\e[41m\e[37m#{string}"      + reset_color; end
+  def rainbow string;    "\e[#{next_color}m#{string}" + reset_color; end
+
+  def next_color
+    @index += 1
+    @colors[@index % COLORS_SIZE]
+  end
+  def reset_color
+    "\e[0m"
+  end
 end
