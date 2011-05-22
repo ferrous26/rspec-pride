@@ -1,10 +1,9 @@
-require 'rubygems'
 require 'rake'
 
 task :default => :test
 task :test    => :spec
 
-if RUBY_ENGINE == 'macruby'
+if RUBY_ENGINE == 'macruby' && MACRUBY_REVISION.match(/^git commit/)
 
   require 'rake/compiletask'
   Rake::CompileTask.new do |t|
@@ -30,12 +29,15 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
 end
 
 
-require 'rubygems/builder'
-require 'rubygems/installer'
+require 'rake/gempackagetask'
 spec = Gem::Specification.load('rspec-pride.gemspec')
+Rake::GemPackageTask.new(spec) do |pkg|
+  pkg.need_zip = false
+  pkg.need_tar = true
+end
 
-desc 'Build the gem'
-task :build do Gem::Builder.new(spec).build end
-
+require 'rubygems/installer'
 desc 'Build the gem and install it'
-task :install => :build do Gem::Installer.new(spec.file_name).install end
+task :install => :gem do
+  Gem::Installer.new(spec.file_name).install
+end
