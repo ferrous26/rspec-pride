@@ -1,0 +1,7 @@
+rvm:
+  - 1.9.2
+  - macruby
+  - rbx
+  - jruby
+  - ruby-head
+  - rbx-2.0
