@@ -14,6 +14,11 @@ To use rspec-pride, you need to call `rspec` kind of like this:
 
 Or put those options in your `.rspec` file.
 
+## Tests
+
+The tests are a lie! They don't test rspec-pride, they just produce
+enough output so that I can visually verify that everything is working.
+
 ## Contributing to Rspec-pride
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
