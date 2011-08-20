@@ -10,7 +10,7 @@ Mimics the functionality of minitest/pride for RSpec2
 
 To use rspec-pride, you need to call `rspec` kind of like this:
 
-    rspec --require rspec/pride --format Pride
+    rspec --require rspec/pride --format RSpec::Pride
 
 Or put those options in your `.rspec` file.
 
