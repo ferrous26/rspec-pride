@@ -1,6 +1,6 @@
 require 'rspec/core/formatters/base_text_formatter'
 
-class Pride < RSpec::Core::Formatters::BaseTextFormatter
+class RSpec::Pride < RSpec::Core::Formatters::BaseTextFormatter
 
   # stolen from minitest/pride
   COLORS = (31..36).to_a
@@ -41,6 +41,7 @@ class Pride < RSpec::Core::Formatters::BaseTextFormatter
     @index += 1
     @colors[@index % COLORS_SIZE]
   end
+
   def reset_color
     "\e[0m"
   end
