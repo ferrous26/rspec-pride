@@ -8,12 +8,11 @@ Gem::Specification.new do |s|
   s.email         = 'mrada@marketcircle.com'
   s.homepage      = 'http://github.com/ferrous26/rspec-pride'
   s.licenses      = ['MIT']
-  s.require_paths = ['lib']
 
-  s.files            = Dir.glob("lib/**/*")
-  s.test_files       = Dir.glob("spec/**/*")
-  s.extra_rdoc_files = [ 'Rakefile', 'README.markdown' ]
+  s.files            = Dir.glob('lib/**/*') + ['Rakefile']
+  s.test_files       = Dir.glob('spec/**/*')
+  s.extra_rdoc_files = ['README.markdown']
 
-  s.add_dependency 'rspec',  ['~> 2.6']
-  s.add_development_dependency 'rake',  ['~> 0.9.2']
+  s.add_dependency             'rspec',  ['~> 2.6']
+  s.add_development_dependency 'rake',   ['~> 0.9.2']
 end
