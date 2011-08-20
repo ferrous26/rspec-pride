@@ -1,6 +1,6 @@
-# Rspec-pride
+# rspec-pride
 
-Take pride in your test output
+Take pride in your test output!
 
 Mimics the functionality of minitest/pride for RSpec2
 
@@ -8,11 +8,11 @@ Mimics the functionality of minitest/pride for RSpec2
 
 ## How to use Rspec-pride
 
-To use rspec-pride, you need to call `rspec` with the following options:
+To use rspec-pride, you need to call `rspec` kind of like this:
 
-    --require rspec/pride --format Pride
+    rspec --require rspec/pride --format Pride
 
-Or put those in your `.rspec` file.
+Or put those options in your `.rspec` file.
 
 ## Contributing to Rspec-pride
 
