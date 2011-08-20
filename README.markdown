@@ -14,8 +14,10 @@ Or put those options in your `.rspec` file.
 
 ## Tests
 
-The tests are a lie! They don't test rspec-pride, they just produce
-enough output so that I can visually verify that everything is working.
+The tests are a lie! They don't test rspec-pride directly, they just
+produce enough output so that you can visually verify that everything
+is working. This was much faster than writing actual tests and works
+just as well in this case.
 
 ## Contributing to Rspec-pride
 
