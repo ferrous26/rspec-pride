@@ -21,5 +21,5 @@ Rake::GemPackageTask.new(spec) { }
 require 'rubygems/installer'
 desc 'Build the gem and install it'
 task :install => :gem do
-  Gem::Installer.new(spec.file_name).install
+  Gem::Installer.new("pkg/#{spec.file_name}").install
 end
