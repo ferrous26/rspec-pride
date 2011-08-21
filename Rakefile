@@ -1,4 +1,4 @@
-require 'rake'
+require 'rubygems'
 
 task :default => :test
 task :test    => :spec
