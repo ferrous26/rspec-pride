@@ -15,16 +15,25 @@ module RSpec
       output.print "\n"
     end
 
-    def example_passed  example; output.print pass   ; end
-    def example_failed  example; output.print failure; end
-    def example_pending example; output.print pending; end
+    def example_passed(example)
+      output.print pass
+    end
+
+    def example_failed(example)
+      super(example)
+      output.print failure
+    end
+
+    def example_pending(example)
+      super(example)
+      output.print pending
+    end
 
     def dump_summary duration, example_count, failure_count, pending_count
       icing = 'Fabulous tests'.split(//).map { |x| rainbow x }.join
       output.print "\n\n#{icing} in #{duration} seconds\n" +
         "#{example_count} examples, #{failure_count} failures, #{pending_count} pending\n\n"
     end
-
 
     private
 
