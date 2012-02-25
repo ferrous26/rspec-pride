@@ -15,17 +15,17 @@ module RSpec
       output.print "\n"
     end
 
-    def example_passed(example)
+    def example_passed example
       output.print pass
     end
 
-    def example_failed(example)
-      super(example)
+    def example_failed example
+      super
       output.print failure
     end
 
-    def example_pending(example)
-      super(example)
+    def example_pending example
+      super
       output.print pending
     end
 
