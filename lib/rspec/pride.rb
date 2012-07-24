@@ -30,6 +30,7 @@ module RSpec
     end
 
     def dump_summary duration, example_count, failure_count, pending_count
+      super
       icing = 'Fabulous tests'.split(//).map { |x| rainbow x }.join
       output.print "\n\n#{icing} in #{duration} seconds\n" +
         "#{example_count} examples, #{failure_count} failures, #{pending_count} pending\n\n"
