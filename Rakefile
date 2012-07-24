@@ -10,7 +10,6 @@ end
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.skip_bundler = true
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
