@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.test_files       = Dir.glob('spec/**/*')
   s.extra_rdoc_files = ['README.markdown']
 
-  s.add_dependency 'rspec',  ['~> 2.6']
+  s.add_dependency 'rspec',  ['~> 2.10']
 end
