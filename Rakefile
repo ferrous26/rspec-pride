@@ -3,7 +3,7 @@ require 'rubygems'
 task :default => :test
 task :test    => :spec
 
-if RUBY_ENGINE == 'macruby' && MACRUBY_REVISION.match(/^git commit/)
+if RUBY_ENGINE == 'macruby'
   require 'rake/compiletask'
   Rake::CompileTask.new
 end
