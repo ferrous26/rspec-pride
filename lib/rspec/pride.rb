@@ -32,7 +32,7 @@ module RSpec
     def dump_summary duration, example_count, failure_count, pending_count
       dump_profile if profile_examples? && failure_count == 0
       icing = 'Fabulous tests'.split(//).map { |x| rainbow x }.join
-      output.print "\n\n#{icing} in #{duration} seconds\n" +
+      output.print "\n\n#{icing} in #{format_duration(duration)}\n" +
         "#{example_count} examples, #{failure_count} failures, #{pending_count} pending\n\n"
     end
 
