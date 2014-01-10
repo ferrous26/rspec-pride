@@ -13,9 +13,9 @@ RSpec::Core::RakeTask.new(:spec) do |spec|
   spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
-require 'rake/gempackagetask'
+require 'rubygems/package_task'
 spec = Gem::Specification.load('rspec-pride.gemspec')
-Rake::GemPackageTask.new(spec) { }
+Gem::PackageTask.new(spec) { }
 
 require 'rubygems/installer'
 desc 'Build the gem and install it'
