@@ -4,6 +4,9 @@ Take pride in your test output!
 
 Mimics the functionality of minitest/pride for RSpec 3
 
+![Prideful Tests](https://github.com/ferrous26/rspec-pride/blob/master/resources/pride.png)
+
+
 ## How to use Rspec-pride
 
 To use rspec-pride, you need to call `rspec` kind of like this:
