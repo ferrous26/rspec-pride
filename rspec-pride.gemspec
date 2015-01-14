@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name    = 'rspec-pride'
-  s.version = '2.3.0'
+  s.version = '3.1.0'
 
   s.summary       = 'Take pride in your testing'
-  s.description   = 'Mimics the functionality of minitest/pride for RSpec2'
+  s.description   = 'Mimics the functionality of minitest/pride for RSpec3'
   s.author        = 'Mark Rada'
   s.email         = 'mrada@marketcircle.com'
   s.homepage      = 'http://github.com/ferrous26/rspec-pride'
