@@ -12,7 +12,7 @@ describe 'Some class' do
 
   50.times do |n|
     it "passes #{n}" do
-      1.should == 1
+      expect(1).to eq 1
     end
   end
 
@@ -24,13 +24,13 @@ describe 'Some class' do
     end
   else
     it 'should fail' do
-      1.should == 0
+      expect(1).to eq 0
     end
   end
 
   10.times do |n|
     it "passed #{n}" do
-      true.should be_true
+      expect(true).to eq true
     end
   end
 
