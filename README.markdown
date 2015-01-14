@@ -34,7 +34,7 @@ just as well in this case.
 
 ## Copyright
 
-Copyright (c) 2011 Mark Rada. See LICENSE.txt for further details.
+Copyright (c) 2011-2015 Mark Rada. See LICENSE.txt for further details.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ferrous26/rspec-pride/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
