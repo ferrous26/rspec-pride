@@ -1,4 +1,5 @@
 *.lock
 *.gem
 *.bundle
+pkg/
 
