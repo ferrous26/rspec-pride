@@ -1,3 +1,5 @@
+require 'rspec/core'
+
 class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
   attr_reader :output
   RSpec::Core::Formatters.register self, :example_passed, :example_failed, :example_pending,
