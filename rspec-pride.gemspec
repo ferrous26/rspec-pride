@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name    = 'rspec-pride'
-  s.version = '3.1.0'
+  s.version = '3.1.1'
 
   s.summary       = 'Take pride in your testing'
   s.description   = 'Mimics the functionality of minitest/pride for RSpec3'
