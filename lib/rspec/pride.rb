@@ -29,10 +29,22 @@ class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
     output.print pending
   end
 
-  def dump_summary(summary)
+  def dump_summary(rspec_summary)
     icing = 'Fabulous tests'.split(//).map {|x| rainbow x }.join
-    output.print "\n\n#{icing} in #{summary.formatted_duration}\n" +
-      "#{summary.example_count} examples, #{summary.failure_count} failures, #{summary.pending_count} pending\n\n"
+    summary_text = "#{rspec_summary.example_count} examples, #{rspec_summary.failure_count} failures, #{rspec_summary.pending_count} pending"
+    formatted_summary = if rspec_summary.failure_count.to_i == 0
+      if rspec_summary.pending_count == 0
+        good(summary_text)
+      else
+        caution(summary_text)
+      end
+    else
+      bad(summary_text)
+    end
+    output.print <<-TEXT
+    #{icing} in #{rspec_summary.duration}
+    #{formatted_summary}
+    TEXT
   end
 
   private
@@ -40,6 +52,18 @@ class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
   def pass   ; rainbow '.'          ; end
   def pending; "\e[40m\e[37mP#{NND}"; end
   def failure; "\e[41m\e[37mF#{NND}"; end
+
+  def good(str)
+    "#{ESC}31m#{ESC}32m#{str}#{NND}"
+  end
+
+  def bad(str)
+    "#{ESC}32m#{ESC}31m#{str}#{NND}"
+  end
+
+  def caution(str)
+    "#{ESC}33m#{ESC}33m#{str}#{NND}"
+  end
 
   if ENV['TERM'] =~ /^xterm(-256color)?$/
 
