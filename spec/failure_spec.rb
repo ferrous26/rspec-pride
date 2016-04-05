@@ -10,6 +10,8 @@ describe 'Some class' do
     end
   end
 
+  it 'should be pending'
+
   it 'should fail' do
     expect(1).to eq 0
   end
