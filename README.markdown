@@ -2,9 +2,10 @@
 
 Take pride in your test output!
 
-Mimics the functionality of minitest/pride for RSpec 3
+Mimics the functionality of [minitest/pride](https://github.com/seattlerb/minitest/blob/master/lib/minitest/pride_plugin.rb) for RSpec 3
 
-![Prideful Tests](https://github.com/ferrous26/rspec-pride/blob/master/resources/pride.png)
+![Prideful Failure](https://github.com/ferrous26/rspec-pride/blob/master/resources/pride_failure.png)
+![Prideful Success](https://github.com/ferrous26/rspec-pride/blob/master/resources/pride_success.png)
 
 
 ## How to use Rspec-pride
@@ -34,8 +35,7 @@ just as well in this case.
 
 ## Copyright
 
-Copyright (c) 2011-2015 Mark Rada. See LICENSE.txt for further details.
+Copyright (c) 2011-2016 Mark Rada. See LICENSE.txt for further details.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ferrous26/rspec-pride/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
