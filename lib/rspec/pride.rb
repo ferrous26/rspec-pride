@@ -29,20 +29,26 @@ class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
     output.print pending
   end
 
-  def dump_summary(rspec_summary)
-    icing = 'Fabulous tests'.split(//).map {|x| rainbow x }.join
-    summary_text = "#{rspec_summary.example_count} examples, #{rspec_summary.failure_count} failures, #{rspec_summary.pending_count} pending"
-    formatted_summary = if rspec_summary.failure_count.to_i == 0
-      if rspec_summary.pending_count == 0
-        good(summary_text)
+  def dump_summary summary
+    icing = 'Fabulous tests'.split(//).map { |x| rainbow x }.join
+
+    summary_text = "#{summary.example_count} examples, " \
+                   "#{summary.failure_count} failures, " \
+                   "#{summary.pending_count} pending"
+
+    formatted_summary =
+      if summary.failure_count.to_i.zero?
+        if summary.pending_count.zero?
+          good summary_text
+        else
+          caution summary_text
+        end
       else
-        caution(summary_text)
+        bad summary_text
       end
-    else
-      bad(summary_text)
-    end
+
     output.print <<-TEXT
-    #{icing} in #{rspec_summary.duration}
+    #{icing} in #{summary.duration}
     #{formatted_summary}
     TEXT
   end
