@@ -3,32 +3,22 @@ require 'rspec/pride'
 require 'stringio'
 
 RSpec.configure do |c|
-  if ENV['TEST_PROFILING']
-    c.profile_examples = true
-  end
+  c.profile_examples = true
 end
 
 describe 'Some class' do
 
-  50.times do |n|
+  16.times do |n|
     it "passes #{n}" do
       expect(1).to eq 1
     end
   end
 
-  it 'should be pending'
-
-  if ENV['TEST_PROFILING']
-    it 'should be really slow' do
-      sleep 2
-    end
-  else
-    it 'should fail' do
-      expect(1).to eq 0
-    end
+  it 'should be really slow' do
+    sleep 2
   end
 
-  10.times do |n|
+  4.times do |n|
     it "passed #{n}" do
       expect(true).to eq true
     end
