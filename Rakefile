@@ -3,10 +3,6 @@ require 'rubygems'
 task :default => :test
 task :test    => :spec
 
-if RUBY_ENGINE == 'macruby'
-  require 'rake/compiletask'
-  Rake::CompileTask.new
-end
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |spec|
