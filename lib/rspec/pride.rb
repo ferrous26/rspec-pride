@@ -73,7 +73,7 @@ class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
     "#{ESC}33m#{ESC}33m#{str}#{NND}"
   end
 
-  if ENV['TERM'] =~ /^xterm(-256color)?$/
+  if ENV['TERM'] =~ /^xterm(-256color|-kitty)?$/
 
     PI_3 = Math::PI / 3
 
