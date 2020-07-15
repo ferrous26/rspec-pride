@@ -53,6 +53,8 @@ class PrideFormatter < RSpec::Core::Formatters::ProgressFormatter
     #{icing} in #{summary.duration}
     #{formatted_summary}
     TEXT
+
+    output.print summary.colorized_rerun_commands + "\n" if summary.failure_count.to_i > 0
   end
 
   private
